@@ -7,8 +7,6 @@
 
 import java.util.Random;
 
-import java.util.Arrays;	// used for testing
-
 public class DeckOfCards {
 	private Card[] deckOfCards;
 	private int topCard;
@@ -28,7 +26,7 @@ public class DeckOfCards {
 	//	post:	returns the top card from the deck
 	public Card draw() {
 		topCard++;
-		if (topCard == deckOfCards.length) {
+		if (topCard > deckOfCards.length) {
 			System.out.println("need to shuffle deck...");
 			throw new IllegalArgumentException();
 		}
@@ -45,7 +43,6 @@ public class DeckOfCards {
 	        deckOfCards[index2] = deckOfCards[index1];
 	        deckOfCards[index1] = temp;
 	    }
-	    System.out.println(Arrays.toString(deckOfCards)); // test
 	}
 	
 	//	post:	re-shuffles the entire deck

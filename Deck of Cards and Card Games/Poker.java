@@ -1,5 +1,8 @@
 // William Thing
 // 2/25/2015
+// This class imitates the popular card game Texas Hold'em Poker
+// where any reasonable number of players can play.
+
 import java.util.Queue;
 import java.util.LinkedList;
 import java.util.Arrays; // testing
