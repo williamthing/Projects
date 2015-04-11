@@ -1,7 +1,7 @@
 # My Locations
 
 This project will display on the web different places in the Seattle area that I have been, as well as having
-an animated marker to display where I am living currently. Click option for more details about what I've done or experienced at these specific locations.
+an animated marker to display where I am living currently. Click option for more details about what I've done or experienced at these specific markers.
 
 
 	will make it much more sophisticated later
