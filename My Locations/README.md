@@ -13,3 +13,7 @@ an animated marker to display where I am living currently. Click option for more
 - mark locations where I want to travel too
 - other misc locations
 - locations will have little informations when you click on them
+
+# Above and Beyond Features!!! :
+- make into mobile app, so people can keep track of their location histories
+- be able to add what they did etc. like a little locations blog
