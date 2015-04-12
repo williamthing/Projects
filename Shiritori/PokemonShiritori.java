@@ -21,6 +21,7 @@ public class PokemonShiritori {
          pokemonMap.get(letter).add(thePokemon);
          //count++;
 		}
+      findShiritori(pokemonMap);
       //System.out.println(count);
 	}
    
@@ -35,9 +36,28 @@ public class PokemonShiritori {
             seenPokemon.add(pokemon);                          // adds first pokemon
             Character lastLetter = pokemon.charAt(pokemon.length()-1);
             findShiritori(map, temp, seenPokemon, lastLetter, answers);
-
          }
-      }                                                                                    
+      }
+      int max = 0;
+      String theAnswer = "";
+      while (!answers.isEmpty()) {
+         
+         Stack<String> possAns = answers.pop();   // a possible answer
+         int size = possAns.size();                // size of possible answer
+         String firstPokemon = "";                 // track first pokemon
+         while (!possAns.isEmpty()) {
+            firstPokemon = possAns.pop();
+         }
+         String line = size + " " + firstPokemon;
+         System.out.println(line);
+         Scanner lineScan = new Scanner(line);
+         int temp = lineScan.nextInt();
+         if (temp > max) {
+            theAnswer = line;
+            max = temp;
+         }
+      }
+      System.out.println(theAnswer);                                                                                  
    }   
     
 	private static void findShiritori(Map<Character, List<String>> map, Stack<String> s,
@@ -57,7 +77,6 @@ public class PokemonShiritori {
                s.pop();
             }
          }
-      
       }
 	}
 
