@@ -1,6 +1,10 @@
 // William Thing
 // Google Games
+// Pokemon Shiritori
 // Fun?!
+//
+//
+// Need to fix the bugs, almost working
 
 import java.util.*;
 import java.io.*;
@@ -19,10 +23,8 @@ public class PokemonShiritori {
             pokemonMap.put(letter, tempList);
 			}
          pokemonMap.get(letter).add(thePokemon);
-         //count++;
 		}
       findShiritori(pokemonMap);
-      //System.out.println(count);
 	}
    
    public static void findShiritori(Map<Character, List<String>> map) {
@@ -38,11 +40,13 @@ public class PokemonShiritori {
             findShiritori(map, temp, seenPokemon, lastLetter, answers);
          }
       }
+      
+      // after possible answers are retrieved
       int max = 0;
       String theAnswer = "";
       while (!answers.isEmpty()) {
          
-         Stack<String> possAns = answers.pop();   // a possible answer
+         Stack<String> possAns = answers.pop();    // a possible answer
          int size = possAns.size();                // size of possible answer
          String firstPokemon = "";                 // track first pokemon
          while (!possAns.isEmpty()) {
@@ -64,7 +68,7 @@ public class PokemonShiritori {
                                              Set<String> seen, Character c, Stack<Stack<String>> answers) {
       // base case
       if (!map.containsKey(c) || seen.containsAll(map.get(c))) {
-         answers.add(s);
+         answers.add(s);      // adds possible answers to list
       } else {
          for (String pokemon: map.get(c)) {
             if (!seen.contains(pokemon)) {
