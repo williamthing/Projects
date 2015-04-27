@@ -61,9 +61,13 @@ public class PokemonShiritori {
             max = temp;
          }
       }
+      // does not print correct output, also program takes too long to run
       System.out.println(theAnswer);                                                                                  
    }   
-    
+   
+   // This part is working, but takes too much time, need to change implementation
+   // so that it is more efficient and it does not correctly add the right things to
+   // the stack 
 	private static void findShiritori(Map<Character, List<String>> map, Stack<String> s,
                                              Set<String> seen, Character c, Stack<Stack<String>> answers) {
       // base case
