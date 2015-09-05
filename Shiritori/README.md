@@ -4,6 +4,8 @@ Find the largest list of pokemon using the game of Shiritori. Shiritori in this 
 
 Your answer should be in the form of the first pokemon that started the game of Shiritori and the length of the largest shiritori.
 
+* use given pokemon file to get the answer
+
 * ran some test on code, need to update because continue to get incorrect input
 and program takes too long to run.
 
